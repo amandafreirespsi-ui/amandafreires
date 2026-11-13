@@ -1170,6 +1170,36 @@
   .rogers-foto { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; border: 3px solid var(--white); box-shadow: 0 8px 22px rgba(142,65,46,0.18); margin-bottom: 14px; }
   .presencial-fotos { display: grid; grid-template-columns: 1.167fr 0.772fr; gap: 10px; margin: 6px 0 16px; align-items: start; }
   .presencial-fotos img { width: 100%; height: auto; display: block; border-radius: 14px; }
+
+  [hidden] { display: none !important; }
+  .art-wrap { max-width: 720px; margin: 0 auto; padding: 128px 24px 72px; }
+  .art-wrap h1 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; color: var(--text); margin: 14px 0 18px; }
+  .art-wrap h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.7rem; line-height: 1.25; color: var(--bark); margin: 40px 0 12px; }
+  .art-wrap p, .art-wrap li { font-size: 1.02rem; line-height: 1.85; color: var(--text-soft); font-weight: 300; }
+  .art-wrap ul, .art-wrap ol { padding-left: 22px; margin: 12px 0; }
+  .art-wrap li { margin-bottom: 8px; }
+  .art-wrap a { color: var(--rose); }
+  .art-meta { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; font-size: 0.82rem; color: var(--text-muted); }
+  .art-tema { background: var(--blush); color: var(--terracotta); padding: 6px 14px; border-radius: 100px; font-weight: 500; font-size: 0.78rem; }
+  .art-resumo { background: var(--white); border-left: 3px solid var(--rose); padding: 6px 22px; border-radius: 0 16px 16px 0; margin: 24px 0; }
+  .art-contato { background: var(--blush); border-radius: 24px; padding: 28px 24px; margin: 40px 0 24px; text-align: center; }
+  .art-contato p { margin-bottom: 4px; }
+  .art-botoes { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 18px; }
+  .art-botoes a { text-decoration: none; }
+  .art-botoes .btn-primary { color: var(--white); opacity: 1; animation: none; }
+  .art-autora { font-style: italic; margin-top: 20px; }
+  .art-aviso { border-top: 1px solid rgba(142,65,46,0.15); padding-top: 22px; margin-top: 28px; }
+  .art-aviso p { font-size: 0.88rem; line-height: 1.7; }
+  .art-voltar { display: inline-block; font-size: 0.85rem; color: var(--text-soft) !important; text-decoration: none; }
+  .art-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin: 24px 0; }
+  .art-card { display: flex; flex-direction: column; gap: 10px; background: var(--white); border: 1px solid rgba(217,134,143,0.22); border-radius: 22px; padding: 24px; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; }
+  .art-card:hover { transform: translateY(-4px); box-shadow: 0 14px 34px rgba(142,65,46,0.12); }
+  .art-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 500; line-height: 1.25; color: var(--text); }
+  .art-card p { font-size: 0.92rem; line-height: 1.65; color: var(--text-soft); font-weight: 300; }
+  .art-card .art-tema { align-self: flex-start; }
+  .art-ler { font-size: 0.85rem; color: var(--rose); font-weight: 500; margin-top: auto; }
+  .artigos-home { background: var(--blush); padding: 80px 28px; }
+  @media (max-width: 720px) { .nav-links { gap: 8px 16px; flex-wrap: wrap; } .nav-links a { font-size: 0.82rem; } }
 </style>
 </head>
 <body>
@@ -1182,6 +1212,7 @@
     <a href="#abordagem">abordagem</a>
     <a href="#como-funciona">como funciona</a>
     <a href="#faq">dúvidas</a>
+    <a href="artigos/">artigos</a>
   </div>
   <a href="https://wa.me/message/SJIXI2EHNR6MN1" target="_blank" rel="noopener" class="nav-cta">conversar com a Amanda</a>
   <div class="progress"><span></span></div>
@@ -1466,6 +1497,15 @@
       <p class="objecao-pensamento">não é prioridade agora</p>
       <p class="objecao-resposta">quanto de energia você já gastou vivendo com essa sensação de não saber quem é? às vezes o maior investimento que você pode fazer é em si mesma.</p>
     </div>
+  </div>
+</section>
+
+<section class="artigos-home" id="artigos" hidden>
+  <div class="section-inner">
+    <span class="section-label">artigos</span>
+    <h2>perguntas que muitas mulheres fazem</h2>
+    <div class="art-grid" id="artHome"></div>
+    <div class="micro-cta"><a href="artigos/" class="btn-outline">ver todos os artigos</a></div>
   </div>
 </section>
 
@@ -1871,6 +1911,7 @@
   </div>
 </footer>
 
+<script src="artigos/catalogo.js"></script>
 <script>
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $ = (q, r) => (r || document).querySelector(q);
@@ -1891,7 +1932,7 @@ function toggleFaq(item) {
 
 // barra de progresso, nav, botão flutuante e destaque do menu
 const bar = $('.progress span'), nav = $('nav'), fl = $('.float-cta');
-const links = $$('.nav-links a'), targets = links.map(function (a) { return $(a.getAttribute('href')); });
+const links = $$('.nav-links a'), targets = links.map(function (a) { var h = a.getAttribute('href'); return h.charAt(0) === '#' ? $(h) : null; });
 function onScroll() {
   const max = document.documentElement.scrollHeight - window.innerHeight, y = window.scrollY;
   bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(y / max, 1) : 0) + ')';
@@ -1942,6 +1983,17 @@ IG_POSTS.forEach(function (u) {
   f.loading = 'lazy'; f.title = 'post do Instagram'; f.setAttribute('scrolling', 'no');
   $('#igGrid').appendChild(f);
 });
+
+// artigos publicados (catálogo em artigos/catalogo.js)
+(function () {
+  const L = (window.ARTIGOS || []).filter(function (a) { return new Date(a.publicar) <= new Date(); })
+    .sort(function (x, y) { return new Date(y.publicar) - new Date(x.publicar); }).slice(0, 3);
+  if (!L.length) return;
+  $('#artHome').innerHTML = L.map(function (a) {
+    return '<a class="art-card" href="artigos/' + a.slug + '.html"><span class="art-tema">' + a.tema + '</span><h3>' + a.titulo + '</h3><p>' + a.resumo + '</p><span class="art-ler">ler artigo →</span></a>';
+  }).join('');
+  $('#artigos').hidden = false;
+})();
 
 // entrada suave das seções
 if (!reduce && 'IntersectionObserver' in window) {
