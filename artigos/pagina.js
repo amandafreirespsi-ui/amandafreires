@@ -26,7 +26,7 @@
     var temas = L.map(function (x) { return x.tema; }).filter(function (t, i, r) { return r.indexOf(t) === i; });
     function render(f) {
       lista.innerHTML = L.filter(function (x) { return f === 'todos' || x.tema === f; }).map(function (x) {
-        return '<a class="art-card" href="' + x.slug + '.html"><span class="art-tema">' + x.tema + '</span><h3>' + x.titulo + '</h3><p>' + x.resumo + '</p><span class="art-ler">ler artigo →</span></a>';
+        return window.cardArtigo(x, '');
       }).join('') || '<p>em breve, novos artigos por aqui.</p>';
     }
     var chips = $('#artChips');
