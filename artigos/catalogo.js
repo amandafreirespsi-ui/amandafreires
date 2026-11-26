@@ -104,5 +104,54 @@ window.ARTIGOS = [
     "resumo": "O medo de não saber atender é comum no início da formação. Veja o que a pesquisa descreve sobre essa fase e o que pode ajudar.",
     "tema": "Estudantes de psicologia",
     "publicar": "2026-11-26T18:53:00-03:00"
+  },
+  {
+    "slug": "como-lidar-com-a-autocobranca",
+    "titulo": "Como lidar com a autocobrança?",
+    "resumo": "A autocobrança pode começar como vontade de fazer bem e virar peso. Entenda de onde ela vem, o que a pesquisa diz sobre autocompaixão e como começar a aliviá-la.",
+    "tema": "Autoestima",
+    "publicar": "2026-11-27T10:00:00-03:00"
+  },
+  {
+    "slug": "por-que-me-sinto-sozinha-mesmo-cercada-de-gente",
+    "titulo": "Por que eu me sinto sozinha mesmo cercada de gente?",
+    "resumo": "Solidão não é o mesmo que estar sozinha. Entenda o que a pesquisa diz sobre a sensação de solidão e o que pode ajudar quando ela aparece no meio das pessoas.",
+    "tema": "Relacionamentos",
+    "publicar": "2026-11-28T10:00:00-03:00"
+  },
+  {
+    "slug": "sindrome-do-impostor-o-que-e-e-como-lidar",
+    "titulo": "Síndrome do impostor: o que é e como lidar?",
+    "resumo": "Sentir que não merece as próprias conquistas é mais comum do que parece. Entenda o que é o fenômeno do impostor, o que a pesquisa mostra e como lidar com ele.",
+    "tema": "Autoestima",
+    "publicar": "2026-11-29T10:00:00-03:00"
+  },
+  {
+    "slug": "como-lidar-com-a-ansiedade-antes-de-uma-decisao-importante",
+    "titulo": "Como lidar com a ansiedade antes de uma decisão importante?",
+    "resumo": "Escolher uma faixa de carreira, mudar de cidade ou terminar uma relação costuma gerar ansiedade. Entenda por que o desconhecido incomoda e como decidir com mais calma.",
+    "tema": "Ansiedade",
+    "publicar": "2026-11-30T10:00:00-03:00"
+  },
+  {
+    "slug": "como-terminar-um-relacionamento-sem-se-perder-de-si",
+    "titulo": "Como terminar um relacionamento sem se perder de si?",
+    "resumo": "Depois de um término, muita gente sente que perdeu parte de quem era. Entenda o que a pesquisa diz sobre o término e a identidade e como cuidar de si nessa fase.",
+    "tema": "Relacionamentos",
+    "publicar": "2026-12-01T10:00:00-03:00"
+  },
+  {
+    "slug": "o-que-e-a-abordagem-centrada-na-pessoa",
+    "titulo": "O que é a Abordagem Centrada na Pessoa?",
+    "resumo": "Entenda de forma simples o que é a Abordagem Centrada na Pessoa, criada por Carl Rogers, como são as sessões e o que a pesquisa mostra sobre empatia e resultados.",
+    "tema": "Abordagem Centrada na Pessoa",
+    "publicar": "2026-12-02T10:00:00-03:00"
+  },
+  {
+    "slug": "quanto-tempo-dura-uma-terapia",
+    "titulo": "Quanto tempo dura uma terapia?",
+    "resumo": "Não existe um prazo único para a terapia. Veja o que a pesquisa diz sobre o número de sessões, o que influencia a duração e como conversar sobre isso com a psicóloga.",
+    "tema": "Começando a terapia",
+    "publicar": "2026-12-03T10:00:00-03:00"
   }
 ];
